@@ -2,10 +2,13 @@
   == render 'fae/shared/form_header', header: @klass_name
 
   main.content
+    = fae_association f, :products
+    = fae_association f, :services
+
     = fae_input f, :total
     = fae_input f, :observations
     = fae_input f, :status
-    = fae_input f, :date
-
+    = fae_datepicker f,  :date
+    
     = fae_association f, :discount
     = fae_association f, :client
